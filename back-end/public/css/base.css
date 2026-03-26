@@ -1,0 +1,45 @@
+body{
+    font-family: var(--font-family);
+    background-color: var(--bg-base);
+    color: var(--secondary);
+}
+
+main{
+    padding: 2.5rem 0 2.5rem;
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+@media (max-width:1280px) {
+	main{
+		padding: 0.625rem;
+	}
+}
+
+.btn{
+    font-size: 1.25rem;
+    padding: 10px 20px;                     /*Increase hotizontal padding*/
+    width: 161px;                       /*Minimum width, but can grow*/
+    height: 48px;
+    border-radius: 25px;
+    color: var(--bg-base);
+    font-weight: 400;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.btn-outline{
+    background-color: transparent;
+    border: 2px solid var(--bg-base);
+    line-height: 23px;
+}
+
+.btn-filled{
+    background-color: var(--bg-base);
+    color: var(--primary);
+}
+
+.btn:hover{
+    background-color: var(--primary);
+    color: var(--bg-base);
+    border-color: var(--primary);
+}

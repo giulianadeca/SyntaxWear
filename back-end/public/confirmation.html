@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - SyntaxWear</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/confirmation-page.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+</head>
+
+<body>
+    <header class="header">
+        <!-- Logo and navegation  -->
+        <h1 class="logo">
+            <a href="index.html" title="SyntaxWear - Tennis & Sneakers Online">
+                <img src="./images/logo/logo.svg" alt="SyntaxWear - Tennis & Sneakers Online">
+            </a>
+        </h1>
+
+        <!-- Menu mobile  -->
+        <input type="checkbox" class="menu-toggle" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">
+            <img src="./images/icons/hamburguer.svg" alt="menu mobile" />
+        </label>
+
+        <nav class="nav-container">
+            <nav class="nav-center" aria-label="Main Categories">
+                <ul>
+                    <li><a href="products.html">Men</a></li>
+                    <li><a href="products.html">Women</a></li>
+                    <li><a href="products.html">Outlet</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-right" aria-label="User Actions">
+                <ul>
+                    <li><a href="products.html">Store</a></li>
+                    <li><a href="#footer">Contact Us</a></li>
+                    <li><a href="#" title="My Account"><img src="./images/icons/user.svg" alt="My Account"></a></li>
+                    <li><a href="#" title="Help"><img src="./images/icons/help.svg" alt="Help"></a></li>
+                    <li><a href="cart.html" title="Shopping Cart"><img src="./images/icons/bag.svg"
+                                alt="Shopping Cart"></a>
+                    </li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+
+    <main class="confirmation-page">
+        <!-- Page header -->
+        <section class="products-banner">
+            <div class="banner-overlay">
+                <h2>Order Confirmed!</h2>
+                <p>Thank you for your purchase</p>
+            </div>
+        </section>
+
+        <!-- Success Message -->
+        <div class="confirmation-content">
+
+            <!-- Success Icon and Message -->
+            <div class="success-message">
+                <div class="success-icon">✓</div>
+                <h2>Your order has been successfully placed!</h2>
+                <p>We've sent a confirmation email to your inbox.</p>
+            </div>
+
+            <!-- Order Details Card -->
+            <div class="order-details">
+                <h3>Order Details</h3>
+
+                <div class="detail-row">
+                    <span class="detail-label">Order Number:</span>
+                    <span class="detail-value order-number">ORD-20241207-5678</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">Order Date:</span>
+                    <span class="detail-value">December 7, 2024</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">Total Amount:</span>
+                    <span class="detail-value total-amount">€379.97</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">Payment Method:</span>
+                    <span class="detail-value">Credit Card</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="detail-label">Delivery Address:</span>
+                    <span class="detail-value">123 Main Street, Dublin, Ireland</span>
+                </div>
+            </div>
+
+            <!-- What's Next Section -->
+            <div class="next-steps">
+                <h3>What happens next?</h3>
+
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Order Processing</h4>
+                        <p>We'll prepare your order and get it ready for shipping.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Shipping Notification</h4>
+                        <p>You'll receive a tracking number via email once shipped.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Delivery</h4>
+                        <p>Your order will arrive within 3-5 business days.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="confirmation-actions">
+                <a href="index.html" class="btn-primary">Continue Shopping</a>
+                <a href="#" class="btn-secondary">Track Order</a>
+            </div>
+
+            <!-- Support Info -->
+            <div class="support-info">
+                <p>Need help with your order?</p>
+                <p>Contact our support team at <a href="mailto:support@syntaxwear.com">support@syntaxwear.com</a></p>
+                <p>or call us at <strong>+353 1 234 5678</strong></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-right">
+                <form class="newsletter-form">
+                    <label for="newsletter-email">Subscribe to our email list</label>
+                    <input type="email" id="newsletter-email" placeholder="email@email.com" />
+                </form>
+                <div class="footer-social">
+                    <span>Social Media</span>
+                    <ul>
+                        <li>
+                            <a href="#"><img src="./images/icons/instagram.svg" alt="Instagram" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./images/icons/whatsapp.svg" alt="WhatsApp" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./images/icons/tiktok.svg" alt="TikTok" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./images/icons/facebook.svg" alt="Facebook" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <ul>
+                    <li>
+                        <strong>Men</strong>
+                        <ul>
+                            <li><a href="products.html">Casual</a></li>
+                            <li><a href="products.html">Sport</a></li>
+                            <li><a href="products.html">Modern</a></li>
+                            <li><a href="products.html">Futuristic</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Women</strong>
+                        <ul>
+                            <li><a href="products.html">Casual</a></li>
+                            <li><a href="products.html">Sport</a></li>
+                            <li><a href="products.html">Modern</a></li>
+                            <li><a href="products.html">Futuristic</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Outlet</strong>
+                        <ul>
+                            <li><a href="products.html">Men</a></li>
+                            <li><a href="products.html">Women</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Our Stores</strong>
+                        <ul>
+                            <li><a href="#">Physical Store</a></li>
+                            <li><a href="#">Online Store</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>About Us</strong>
+                        <ul>
+                            <li><a href="#">Who we are</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <hr />
+        <div class="footer-copy">Copyright. All Rights Reserved</div>
+    </footer>
+
+    <!-- JavaScript files need to be in the end because it just run after the HTML is loaded. -->
+    <script src="js/main.js"></script> <!-- Global JS file for all pages -->
+    <script src="js/confirmation.js"></script> <!-- Confirmation page logic -->
+
+</body>
+
+</html>

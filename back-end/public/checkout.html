@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - SyntaxWear</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/checkout-page.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+</head>
+
+<body>
+    <header class="header">
+        <!-- Logo and navegation  -->
+        <h1 class="logo">
+            <a href="index.html" title="SyntaxWear - Tennis & Sneakers Online">
+                <img src="./images/logo/logo.svg" alt="SyntaxWear - Tennis & Sneakers Online">
+            </a>
+        </h1>
+
+        <!-- Menu mobile  -->
+        <input type="checkbox" class="menu-toggle" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">
+            <img src="./images/icons/hamburguer.svg" alt="menu mobile" />
+        </label>
+
+        <nav class="nav-container">
+            <nav class="nav-center" aria-label="Main Categories">
+                <ul>
+                    <li><a href="products.html">Men</a></li>
+                    <li><a href="products.html">Women</a></li>
+                    <li><a href="products.html">Outlet</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-right" aria-label="User Actions">
+                <ul>
+                    <li><a href="products.html">Store</a></li>
+                    <li><a href="#footer">Contact Us</a></li>
+                    <li><a href="#" title="My Account"><img src="./images/icons/user.svg" alt="My Account"></a></li>
+                    <li><a href="#" title="Help"><img src="./images/icons/help.svg" alt="Help"></a></li>
+                    <li><a href="cart.html" title="Shopping Cart"><img src="./images/icons/bag.svg"
+                                alt="Shopping Cart"></a>
+                    </li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+
+    <main class="checkout-page">
+        <!-- Page header -->
+        <section class="products-banner">
+            <div class="banner-overlay">
+                <h2>Checkout</h2>
+                <p>Complete your purchase</p>
+            </div>
+        </section>
+
+        <!-- Progress Indicator - Shows checkout steps -->
+        <div class="checkout-progress">
+            <div class="progress-step completed">
+                <div class="step-number">1</div>
+                <div class="step-label">Cart</div>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step active">
+                <div class="step-number">2</div>
+                <div class="step-label">Checkout</div>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                <div class="step-number">3</div>
+                <div class="step-label">Complete</div>
+            </div>
+        </div>
+
+        <!-- Main checkout content - 2 columns layout -->
+        <div class="checkout-content">
+
+            <!-- LEFT COLUMN - Forms -->
+            <div class="checkout-forms">
+                <form id="checkoutForm">
+
+                    <!-- SECTION 1: Personal Information -->
+                    <div class="form-section">
+                        <h2 class="section-title">Personal Information</h2>
+
+                        <div class="form-row">
+                            <!-- Full Name input -->
+                            <div class="form-group full-width">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <!-- Email input -->
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                            </div>
+
+                            <!-- Phone input -->
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+353 123 456 789" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 2: Delivery Address -->
+                    <div class="form-section">
+                        <h2 class="section-title">Delivery Address</h2>
+
+                        <div class="form-row">
+                            <!-- Street Address -->
+                            <div class="form-group full-width">
+                                <label for="address">Street Address *</label>
+                                <input type="text" id="address" name="address" placeholder="123 Main Street" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <!-- City -->
+                            <div class="form-group">
+                                <label for="city">City *</label>
+                                <input type="text" id="city" name="city" placeholder="Dublin" required>
+                            </div>
+
+                            <!-- Postal Code -->
+                            <div class="form-group">
+                                <label for="postalCode">Postal Code *</label>
+                                <input type="text" id="postalCode" name="postalCode" placeholder="D01 X2Y3" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <!-- Country -->
+                            <div class="form-group full-width">
+                                <label for="country">Country *</label>
+                                <select id="country" name="country" required>
+                                    <option value="">Select your country</option>
+                                    <option value="Ireland">Ireland</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="Portugal">Portugal</option>
+                                    <option value="Spain">Spain</option>
+                                    <option value="France">France</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="Netherlands">Netherlands</option>
+                                    <option value="Belgium">Belgium</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 3: Payment Method -->
+                    <div class="form-section">
+                        <h2 class="section-title">Payment Method</h2>
+
+                        <!-- Payment options - Radio buttons -->
+                        <div class="payment-options">
+
+                            <!-- Credit Card option -->
+                            <div class="payment-option">
+                                <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" checked>
+                                <label for="creditCard">
+                                    <span class="payment-icon">💳</span>
+                                    <span class="payment-label">Credit Card</span>
+                                </label>
+                            </div>
+
+                            <!-- Debit Card option -->
+                            <div class="payment-option">
+                                <input type="radio" id="debitCard" name="paymentMethod" value="debitCard">
+                                <label for="debitCard">
+                                    <span class="payment-icon">💳</span>
+                                    <span class="payment-label">Debit Card</span>
+                                </label>
+                            </div>
+
+                            <!-- Apple pay option -->
+                            <div class="payment-option">
+                                <input type="radio" id="apple" name="paymentMethod" value="apple">
+                                <label for="apple">
+                                    <span class="payment-icon">🍎</span>
+                                    <span class="payment-label">Apple Pay</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Credit Card Details (appears when credit/debit card is selected) -->
+                        <div class="card-details" id="cardDetails">
+                            <div class="form-row">
+                                <!-- Card Number -->
+                                <div class="form-group full-width">
+                                    <label for="cardNumber">Card Number *</label>
+                                    <input type="text" id="cardNumber" name="cardNumber"
+                                        placeholder="1234 5678 9012 3456" maxlength="19">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <!-- Expiry Date -->
+                                <div class="form-group">
+                                    <label for="expiryDate">Expiry Date *</label>
+                                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY"
+                                        maxlength="5">
+                                </div>
+
+                                <!-- CVV -->
+                                <div class="form-group">
+                                    <label for="cvv">CVV *</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 4: Additional Notes (optional) -->
+                    <div class="form-section">
+                        <h2 class="section-title">Additional Notes (Optional)</h2>
+
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="notes">Order Notes</label>
+                                <textarea id="notes" name="notes" rows="4"
+                                    placeholder="Any special instructions for your order..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Conditions checkbox -->
+                    <div class="form-section">
+                        <div class="terms-checkbox">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">
+                                I agree to the <a href="#" class="terms-link">Terms and Conditions</a>
+                                and <a href="#" class="terms-link">Privacy Policy</a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="form-actions">
+                        <a href="cart.html" class="btn-secondary">← Back to Cart</a>
+                        <button type="submit" class="btn-primary">Confirm Order</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- RIGHT COLUMN - Order Summary -->
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+
+                <!-- Products List -->
+                <div class="summary-items" id="summaryItems">
+                    <!-- Products will be inserted here by JavaScript -->
+                </div>
+
+                <!-- Price Breakdown -->
+                <div class="summary-details">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">€0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping:</span>
+                        <span id="shipping">€5.00</span>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-row summary-total">
+                        <span>Total:</span>
+                        <span id="total">€0.00</span>
+                    </div>
+                </div>
+
+                <!-- Security Badge -->
+                <div class="security-badge">
+                    <span class="security-icon">🔒</span>
+                    <div class="security-text">
+                        <strong>Secure Checkout</strong>
+                        <p>Your payment information is encrypted and secure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-right">
+                <form class="newsletter-form">
+                    <label for="newsletter-email">Subscribe to our email list</label>
+                    <input type="email" id="newsletter-email" placeholder="email@email.com" />
+                </form>
+                <div class="footer-social">
+                    <span>Social Media</span>
+                    <ul>
+                        <li>
+                            <a href="#"><img src="./images/icons/instagram.svg" alt="Instagram" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./images/icons/whatsapp.svg" alt="WhatsApp" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./images/icons/tiktok.svg" alt="TikTok" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./images/icons/facebook.svg" alt="Facebook" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <ul>
+                    <li>
+                        <strong>Men</strong>
+                        <ul>
+                            <li><a href="products.html">Casual</a></li>
+                            <li><a href="products.html">Sport</a></li>
+                            <li><a href="products.html">Modern</a></li>
+                            <li><a href="products.html">Futuristic</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Women</strong>
+                        <ul>
+                            <li><a href="products.html">Casual</a></li>
+                            <li><a href="products.html">Sport</a></li>
+                            <li><a href="products.html">Modern</a></li>
+                            <li><a href="products.html">Futuristic</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Outlet</strong>
+                        <ul>
+                            <li><a href="products.html">Men</a></li>
+                            <li><a href="products.html">Women</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Our Stores</strong>
+                        <ul>
+                            <li><a href="#">Physical Store</a></li>
+                            <li><a href="#">Online Store</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>About Us</strong>
+                        <ul>
+                            <li><a href="#">Who we are</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <hr />
+        <div class="footer-copy">Copyright. All Rights Reserved</div>
+    </footer>
+
+    <!-- JavaScript files need to be in the end because it just run after the HTML is loaded. -->
+    <script src="js/main.js"></script> <!-- Global JS file for all pages -->
+    <script src="js/checkout.js"></script> <!-- Specific JS file for checkout page -->
+
+</body>
+
+</html>

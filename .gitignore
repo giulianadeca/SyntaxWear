@@ -1,0 +1,29 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+logs/
+*.log
+
+# Database files
+*.sql
+*.sqlite
+*.db
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Temporary folders
+dist/
+build/

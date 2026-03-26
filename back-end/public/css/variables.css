@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+:root {
+    --font-family: 'Ubuntu', sans-serif;
+    
+    /* Colors */
+    --bg-base: #FFFFFF;
+    --bg-light: #F8F9FA;
+    --border-color: #E0E0E0;
+    --primary: #6329A2;
+    --secondary: #333333;
+    --tx-strong: #EDEDED;
+    --news: #AAAAAA;
+    --hoover: #7C3AED;
+    --media: #EEEEEE;
+    --sale: #E74C3C;
+    --feedback: #27AE60;
+}

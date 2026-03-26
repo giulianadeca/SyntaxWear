@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - SyntaxWear</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/cart-page.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+</head>
+
+<body>
+    <header class="header">
+        <!-- Logo and navegation  -->
+        <h1 class="logo">
+            <a href="index.html" title="SyntaxWear - Tennis & Sneakers Online">
+                <img src="./images/logo/logo.svg" alt="SyntaxWear - Tennis & Sneakers Online">
+            </a>
+        </h1>
+
+        <!-- Menu mobile  -->
+        <input type="checkbox" class="menu-toggle" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">
+            <img src="./images/icons/hamburguer.svg" alt="menu mobile" />
+        </label>
+
+        <nav class="nav-container">
+            <nav class="nav-center" aria-label="Main Categories">
+                <ul>
+                    <li><a href="products.html">Men</a></li>
+                    <li><a href="products.html">Women</a></li>
+                    <li><a href="products.html">Outlet</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-right" aria-label="User Actions">
+                <ul>
+                    <li><a href="products.html">Store</a></li>
+                    <li><a href="#footer">Contact Us</a></li>
+                    <li><a href="#" title="My Account"><img src="./images/icons/user.svg" alt="My Account"></a></li>
+                    <li><a href="#" title="Help"><img src="./images/icons/help.svg" alt="Help"></a></li>
+                    <li><a href="cart.html" title="Shopping Cart"><img src="./images/icons/bag.svg"
+                                alt="Shopping Cart"></a>
+                    </li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    <main class="cart-page">
+        <!-- Page header-->
+        <section class="products-banner">
+            <div class="banner-overlay">
+                <h2>Your Shopping Cart</h2>
+            </div>
+        </section>
+
+        <!-- Empty cart section-->
+        <div class="empty-cart" id="emptyCart">
+            <h2>Your cart is currently empty.</h2>
+            <p>Add amazing products to start shopping!</p>
+            <a href="products.html" class="btn-primary">Shop Now</a>
+
+        </div>
+
+        <!-- Cart with items section. Just appears when there are produtcs in cart. -->
+        <div class="cart-content" id="cartContent" style="display: none;">
+
+            <!-- Left Column - product list-->
+            <div class="cart-items">
+                <h2>Cart Items</h2>
+
+                <!-- Container where the products will be inserted dynamically-->
+                <div class="items-list" id="cartItemsList">
+                    <!-- The products will be added here via JS. -->
+                </div>
+            </div>
+
+            <!-- Right Column - order summary-->
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+
+                <div class="summary-details">
+                    <!--Subtotal-->
+                    <div class="summary-row">
+                        <span>Subtotal: </span>
+                        <span id="subtotal">€0.00</span>
+                    </div>
+
+                    <!--Shipping-->
+                    <div class="summary-row">
+                        <span>Shipping: </span>
+                        <span id="shipping">€5.00</span>
+                    </div>
+
+                    <!--Separator line-->
+                    <div class="summary-divider"></div>
+
+                    <!--Total (Subtotal + shipping)-->
+                    <div class="summary-row summary-total">
+                        <span>Total: </span>
+                        <span id="total">€0.00</span>
+                    </div>
+                </div>
+
+                <!-- Checkout button-->
+                <div class="summary-actions">
+                    <button class="btn-primary btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+                    <a href="products.html" class="btn-secondary">Continue Shopping</a>
+                </div>
+
+                <!-- Payment info-->
+                <div>
+                    <p>💳 100% Secure Payment</p>
+                    <p>🚚 Free Shipping over €50</p>
+                    <p>↩️ 30-Day Return Policy</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-right">
+                <form class="newsletter-form">
+                    <label for="newsletter-email">Subscribe to our email list</label>
+                    <input type="email" id="newsletter-email" placeholder="email@email.com" />
+                </form>
+                <div class="footer-social">
+                    <span>Social Media</span>
+                    <ul>
+                        <li>
+                            <a href="#"><img src="./images/icons/instagram.svg" alt="Instagram" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./images/icons/whatsapp.svg" alt="WhatsApp" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./images/icons/tiktok.svg" alt="TikTok" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./images/icons/facebook.svg" alt="Facebook" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <ul>
+                    <li>
+                        <strong>Men</strong>
+                        <ul>
+                            <li><a href="products.html">Casual</a></li>
+                            <li><a href="products.html">Sport</a></li>
+                            <li><a href="products.html">Modern</a></li>
+                            <li><a href="products.html">Futuristic</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Women</strong>
+                        <ul>
+                            <li><a href="products.html">Casual</a></li>
+                            <li><a href="products.html">Sport</a></li>
+                            <li><a href="products.html">Modern</a></li>
+                            <li><a href="products.html">Futuristic</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Outlet</strong>
+                        <ul>
+                            <li><a href="products.html">Men</a></li>
+                            <li><a href="products.html">Women</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Our Stores</strong>
+                        <ul>
+                            <li><a href="#">Physical Store</a></li>
+                            <li><a href="#">Online Store</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>About Us</strong>
+                        <ul>
+                            <li><a href="#">Who we are</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <hr />
+        <div class="footer-copy">Copyright. All Rights Reserved</div>
+    </footer>
+
+    <!-- JavaScript files need to be in the end because it just run after the HTML is loaded. -->
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

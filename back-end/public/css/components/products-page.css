@@ -1,0 +1,253 @@
+/* Main container*/
+.products-main{
+    padding: 2.5rem 0;
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+/* Page header*/
+.products-banner {
+    background: url(../../images/banners/products-banner2.png) no-repeat center;
+    background-size: cover;
+    height: 450px;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+
+.banner-overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(99, 41, 162, 0.8) 0%,
+        rgba(124, 58, 237, 0.6) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.banner-overlay h2 {
+    font-size: 3rem;
+    color: var(--bg-base);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.banner-overlay p {
+    font-size: 1.25rem;
+    color: var(--bg-base);
+    opacity: 0.95;
+}
+
+/* Filter section*/
+.filter-section{
+    margin-bottom: 2.5rem;
+    padding: 0 1rem;
+}
+
+.filter-container{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    border: 2px solid var(--secondary);
+    border-radius: 25px;
+    color: var(--secondary);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--hoover);
+    border-color: var(--hoover);
+    color: var(--bg-base);
+}
+
+.filter-btn.active {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--bg-base);
+}
+
+/* Products grid*/
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* Product card */
+.product-card {
+    background-color: var(--bg-base);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Product image */
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background-color: var(--media);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+/* Product badge */
+.product-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--primary);
+    color: var(--bg-base);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.product-badge.sale {
+    background-color: var(--sale);
+}
+
+/* Product info */
+.product-info {
+    padding: 1.25rem;
+}
+
+.product-name {
+    font-size: 1.25rem;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.product-category {
+    font-size: 0.875rem;
+    color: var(--news);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Price variations */
+.price-old {
+    font-size: 1.125rem;
+    color: var(--news);
+    text-decoration: line-through;
+    margin-right: 0.5rem;
+}
+
+.price-current {
+    color: var(--price);
+}
+
+/* Add to cart button */
+.add-to-cart {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.add-to-cart:active {
+    transform: scale(0.95);
+}
+
+/* Responsive design */
+@media (max-width: 1280px) {
+    .products-main {
+        padding: 1.5rem 0.625rem;
+    }
+
+    .page-header h2 {
+        font-size: 2rem;
+    }
+
+    .products-grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .filters-container {
+        gap: 0.75rem;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .product-image {
+        height: 200px;
+    }
+
+    .product-info {
+        padding: 1rem;
+    }
+
+    .product-name {
+        font-size: 1rem;
+    }
+
+    .product-price {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 250px;
+    }
+}
